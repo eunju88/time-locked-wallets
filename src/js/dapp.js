@@ -10,8 +10,8 @@ DApp = {
     // set to true to use with local blockchain
     development: true,
     //Rinkeby:
-    factoryAddress: "0xe47684d658872fbde11c82036099a12c066c4fa3",
-    tokenAddress: "0x86b32525e687500ed4a665d1b16fef526cdd6f10",
+    factoryAddress: "0xAB5570a938eade752517550e4aAeFfC48a47cD91",
+    tokenAddress: "0x4B335238cFC3a40109506245608963c99408Fefb",
 
     init: function() {
         console.log("[x] Initializing DApp.");
@@ -27,9 +27,13 @@ DApp = {
         // Is there is an injected web3 instance?
         if (typeof web3 !== 'undefined') {
           DApp.web3Provider = web3.currentProvider;
+
+          console.log("web3 undefined");
+
         } else {
           // If no injected web3 instance is detected, fallback to the TestRPC
-          DApp.web3Provider = new Web3.providers.HttpProvider('http://localhost:9545');
+          console.log("web3 else");
+          DApp.web3Provider = new Web3.providers.HttpProvider('https://ropsten.etherscan.io/');
         }
         web3 = new Web3(DApp.web3Provider);
         console.log("[x] web3 object initialized.");
