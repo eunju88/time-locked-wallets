@@ -1,5 +1,5 @@
 const TimeLockedWallet = artifacts.require("./TimeLockedWallet.sol");
-const ToptalToken = artifacts.require("./ToptalToken.sol");
+const JHGToken = artifacts.require("./JHGToken.sol");
 
 let ethToSend = web3.toWei(1, "ether");
 let someGas = web3.toWei(0.01, "ether");
@@ -83,26 +83,26 @@ contract('TimeLockedWallet', (accounts) => {
         assert(ethToSend == await web3.eth.getBalance(timeLockedWallet.address));
     });
 
-    it("Owner can withdraw the ToptalToken after the unlock date", async () => {
+    it("Owner can withdraw the JHGToken after the unlock date", async () => {
         //set unlock date in unix epoch to now
         let now = Math.floor((new Date).getTime() / 1000);
         //create the wallet contract 
         let timeLockedWallet = await TimeLockedWallet.new(creator, owner, now);
 
         //create ToptalToken contract
-        let toptalToken = await ToptalToken.new({from: creator});
+        let JHGToken = await JHGToken.new({from: creator});
         //check contract initiated well and has 1M of tokens
-        assert(1000000000000 == await toptalToken.balanceOf(creator));        
+        assert(1000000000000 == await JHGToken.balanceOf(creator));        
 
         //load the wallet with some Toptal tokens
         let amountOfTokens = 1000000000;
-        await toptalToken.transfer(timeLockedWallet.address, amountOfTokens, {from: creator});
+        await JHGToken.transfer(timeLockedWallet.address, amountOfTokens, {from: creator});
         //check that timeLockedWallet has ToptalTokens
-        assert(amountOfTokens == await toptalToken.balanceOf(timeLockedWallet.address));
+        assert(amountOfTokens == await JHGToken.balanceOf(timeLockedWallet.address));
         //now withdraw tokens
-        await timeLockedWallet.withdrawTokens(toptalToken.address, {from: owner});
+        await timeLockedWallet.withdrawTokens(JHGToken.address, {from: owner});
         //check the balance is correct
-        let balance = await toptalToken.balanceOf(owner);
+        let balance = await JHGToken.balanceOf(owner);
         assert(balance.toNumber() == amountOfTokens);
     });
 

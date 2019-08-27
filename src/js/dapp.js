@@ -10,8 +10,8 @@ DApp = {
     // set to true to use with local blockchain
     development: true,
     //Rinkeby:
-    factoryAddress: "0xAB5570a938eade752517550e4aAeFfC48a47cD91",
-    tokenAddress: "0x4B335238cFC3a40109506245608963c99408Fefb",
+    factoryAddress: "0xDfF0E18c54FA7f92CbE114E3B4008AEDBf72Fd09",
+    tokenAddress: "0x02A8eC4374b8ff269107B1802173Caa41aB3851d",
 
     init: function() {
         console.log("[x] Initializing DApp.");
@@ -27,13 +27,9 @@ DApp = {
         // Is there is an injected web3 instance?
         if (typeof web3 !== 'undefined') {
           DApp.web3Provider = web3.currentProvider;
-
-          console.log("web3 undefined");
-
         } else {
           // If no injected web3 instance is detected, fallback to the TestRPC
-          console.log("web3 else");
-          DApp.web3Provider = new Web3.providers.HttpProvider('https://ropsten.etherscan.io/');
+          DApp.web3Provider = new Web3.providers.HttpProvider('http://localhost:9545');
         }
         web3 = new Web3(DApp.web3Provider);
         console.log("[x] web3 object initialized.");
@@ -63,7 +59,7 @@ DApp = {
             console.log("[x] TimeLockedWalletFactory contract initialized.");
 
             //hardcoding ToptalToken for simplicity
-            $.getJSON('../contracts/ToptalToken.json', function(toptalTokenContract){
+            $.getJSON('../contracts/JHGToken.json', function(toptalTokenContract){
                 DApp.toptalTokenContract = TruffleContract(toptalTokenContract);
                 DApp.toptalTokenContract.setProvider(DApp.web3Provider);
                 console.log("[x] ToptalToken contract initialized.");

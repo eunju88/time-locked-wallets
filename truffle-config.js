@@ -35,7 +35,8 @@ var rinkebyPrivateKeys = ["F238708E948B66A8EC2F38011D6F7C00EFCE96FBEE49149EE6635
 var krwlocalPrivateKeys = ["F238708E948B66A8EC2F38011D6F7C00EFCE96FBEE49149EE6635CED2A293C1D"];
 //, "hex");
 //var rinkebyWallet = Wallet.fromPrivateKey(rinkebyPrivateKey);
-var rinkebyProvider = new WalletProvider(rinkebyPrivateKeys, "https://rinkeby.infura.io/");
+//var rinkebyProvider = new WalletProvider(rinkebyPrivateKeys, "https://rinkeby.infura.io/");
+var rinkebyProvider = new WalletProvider(rinkebyPrivateKeys, "https://rinkeby.infura.io/v3/d0bc7941a83b424a9561352185e3de07");
 var ropstenProvider = new WalletProvider(rinkebyPrivateKeys, "https://ropsten.infura.io/v3/");
 var ethmainProvider = new WalletProvider(rinkebyPrivateKeys, "https://api.myetherwallet.com/eth");
 var krwlocalProvider = new WalletProvider(krwlocalPrivateKeys, "http://127.0.0.1:8545/");

@@ -1,7 +1,7 @@
 var TimeLockedWalletFactory = artifacts.require("TimeLockedWalletFactory");
-var ToptalToken = artifacts.require("ToptalToken");
+var JHGToken = artifacts.require("JHGToken");
 
 module.exports = function(deployer) {
   deployer.deploy(TimeLockedWalletFactory);
-  deployer.deploy(ToptalToken);
+  deployer.deploy(JHGToken);
 };

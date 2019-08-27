@@ -1,0 +1,221 @@
+PS C:\Users\class3\Desktop\lock\time-locked-wallets> truffle compile
+
+Compiling your contracts...
+===========================
+> Compiling .\contracts\ERC20.sol
+> Compiling .\contracts\SafeMath.sol
+> Compiling .\contracts\TimeLockedWallet.sol
+> Artifacts written to C:\Users\class3\Desktop\lock\time-locked-wallets\build\contracts
+> Compiled successfully using:
+   - solc: 0.4.18+commit.9cf6e910.Emscripten.clang
+
+PS C:\Users\class3\Desktop\lock\time-locked-wallets> truffle develop
+Truffle Develop started at http://127.0.0.1:9545/
+
+Accounts:
+(0) 0x84582843512788e5d6dfb1194467528c5c272ea5
+(1) 0xe3c5b6287bfa9a708926a25105079e38a69d41fb
+(2) 0x0eb8b1d457d44c7685a5d29a669ae1d6733d7bf2
+(3) 0x4cc7f5aa9adc53a58e24306bccc4d880de1202b7
+(4) 0x44acb701109a049229a5cecbb14c176aef167799
+(5) 0x23ec94bf52c29e14dcce691fcc1776b970b452ce
+(6) 0x6611cbeacd4f85099db2f04724b0c8defe2a719a
+(7) 0x965b7ff92d506d77c7fa4f68a0e18c18541202de
+(8) 0xdc2337c1b1a5c4bcc5e9fa9fc2624303e92778d5
+(9) 0x4ab675a56bd8e1431d36f0af3c8d6b406c0dddbf
+
+Private Keys:
+(0) ef96b27bb191632d526fa1257f225dcaba0a42fffdd0031d3776cae3418909ac
+(1) ae416ec300b3ebc10d1992105034cb7ecbb4a965ab76398dc1df9489a0204ce3
+(2) 5b4078b7638c253c168a980c50c4d1e44f935afc5d72f78643be2302b7e4333d
+(3) 3b96ae4f53dd2a910946bf2bd7778506a48dba47c2ab9b0191974ed03fb37c50
+(4) 92308e5a5f762febad0ca97554c20d2803ed6394c8602c811dd9ce05328c18b2
+(5) d336983364f9b6ea298235de70b1d9c6178ee035050822858668a8e30924febf
+(6) 7530d6481c4a9b53229b27c56860aa0abb5358551af2122e56657680ce0f4bc4
+(7) d9ba3089bea24c72dfcc0fca86aa5bbd186fa906e2438b558dbf0891341b9fd6
+(8) acb8784ba9cb56318c7a68c55938655d867b630ed3798b7d4fd2be6d041e7cc0
+(9) 6f95cf0dc5e36ce8d8ca65b8b8ae9346f55e05fffe157f92fe02de466b97fa5f
+
+Mnemonic: neck squirrel tomorrow army expand goddess more target learn egg menu erode
+
+??  Important ??  : This mnemonic was created for you by Truffle. It is not secure.
+Ensure you do not use it on production blockchains, or else you risk losing funds.
+
+truffle(develop)> compile
+
+Compiling your contracts...
+===========================
+> Compiling .\contracts\ERC20.sol
+> Compiling .\contracts\SafeMath.sol
+> Compiling .\contracts\TimeLockedWallet.sol
+> Artifacts written to C:\Users\class3\Desktop\lock\time-locked-wallets\build\contracts
+> Compiled successfully using:
+   - solc: 0.4.18+commit.9cf6e910.Emscripten.clang
+
+truffle(develop)>
+(To exit, press ^C again or type .exit)
+truffle(develop)>
+PS C:\Users\class3\Desktop\lock\time-locked-wallets> truffle compile
+
+Compiling your contracts...
+===========================
+> Compiling .\contracts\ERC20.sol
+> Compiling .\contracts\JHGToken.sol
+> Compiling .\contracts\Migrations.sol
+> Compiling .\contracts\SafeMath.sol
+> Compiling .\contracts\TimeLockedWallet.sol
+> Compiling .\contracts\TimeLockedWalletFactory.sol
+> Compiling .\contracts\ERC20.sol
+> Compiling .\contracts\SafeMath.sol
+> Compiling .\contracts\TimeLockedWallet.sol
+> Artifacts written to C:\Users\class3\Desktop\lock\time-locked-wallets\build\contracts
+> Compiled successfully using:
+   - solc: 0.4.18+commit.9cf6e910.Emscripten.clang
+
+PS C:\Users\class3\Desktop\lock\time-locked-wallets> truffle deploy --network rinkeby --reset
+
+Compiling your contracts...
+===========================
+> Compiling .\contracts\ERC20.sol
+> Compiling .\contracts\SafeMath.sol
+> Compiling .\contracts\TimeLockedWallet.sol
+> Artifacts written to C:\Users\class3\Desktop\lock\time-locked-wallets\build\contracts
+> Compiled successfully using:
+   - solc: 0.4.18+commit.9cf6e910.Emscripten.clang
+
+
+Migrations dry-run (simulation)
+===============================
+> Network name:    'rinkeby-fork'
+> Network id:      4
+> Block gas limit: 0x6ad70e
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > block number:        4983397
+   > block timestamp:     1566889535
+   > account:             0x0c7a4D71DB35451c80bBB03eaf24549897b99cdA
+   > balance:             3.59447929
+   > gas used:            254607
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00509214 ETH
+
+   -------------------------------------
+   > Total cost:          0.00509214 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'TimeLockedWalletFactory'
+   -----------------------------------
+   > block number:        4983399
+   > block timestamp:     1566889541
+   > account:             0x0c7a4D71DB35451c80bBB03eaf24549897b99cdA
+   > balance:             3.57285209
+   > gas used:            1054379
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.02108758 ETH
+
+
+   Deploying 'JHGToken'
+   --------------------
+   > block number:        4983400
+   > block timestamp:     1566889549
+   > account:             0x0c7a4D71DB35451c80bBB03eaf24549897b99cdA
+   > balance:             3.55268173
+   > gas used:            1008518
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.02017036 ETH
+
+   -------------------------------------
+   > Total cost:          0.04125794 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.04635008 ETH
+
+
+Starting migrations...
+======================
+> Network name:    'rinkeby'
+> Network id:      4
+> Block gas limit: 0x6abddc
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0x9cba32437686c71bd2ca06ea5c14a85e48e9daeec4bda84e615cfd58ebfd9d53
+   > Blocks: 2            Seconds: 17
+   > contract address:    0xe9C8D035a505AD59f42F73AF4dd374e4151FB3ec
+   > block number:        4983399
+   > block timestamp:     1566889574
+   > account:             0x0c7a4D71DB35451c80bBB03eaf24549897b99cdA
+   > balance:             3.59417929
+   > gas used:            269607
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00539214 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00539214 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'TimeLockedWalletFactory'
+   -----------------------------------
+   > transaction hash:    0x00040aa8adc032595e74219d541353b069b8059004c265273917b8d374a719c3
+   > Blocks: 0            Seconds: 9
+   > contract address:    0xDfF0E18c54FA7f92CbE114E3B4008AEDBf72Fd09
+   > block number:        4983401
+   > block timestamp:     1566889604
+   > account:             0x0c7a4D71DB35451c80bBB03eaf24549897b99cdA
+   > balance:             3.57225209
+   > gas used:            1054379
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.02108758 ETH
+
+
+   Deploying 'JHGToken'
+   --------------------
+   > transaction hash:    0x51e4d39100d91e341f4bedc0d325011d3696d2ec5ee52426833372aa969de731
+   > Blocks: 0            Seconds: 9
+   > contract address:    0x02A8eC4374b8ff269107B1802173Caa41aB3851d
+   > block number:        4983402
+   > block timestamp:     1566889619
+   > account:             0x0c7a4D71DB35451c80bBB03eaf24549897b99cdA
+   > balance:             3.55058173
+   > gas used:            1083518
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.02167036 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.04275794 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.04815008 ETH

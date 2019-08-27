@@ -7,17 +7,17 @@ import './ERC20.sol';
  * @title Toptal token
  */
 
-contract ToptalToken is ERC20 {
+contract JHGToken is ERC20 {
   using SafeMath for uint256;
 
   mapping(address => uint256) balances;
   mapping (address => mapping (address => uint256)) internal allowed;
 
-  string public name = "Toptal Token";
-  string public symbol = "TTT";
-  uint256 public decimals = 6;
+  string public name = "JHG Token";
+  string public symbol = "JHG";
+  uint256 public decimals = 18;
 
-  function ToptalToken() public {
+  function JHGToken() public {
     totalSupply = 1000000 * (10 ** decimals);
     balances[msg.sender] = totalSupply;
   }
